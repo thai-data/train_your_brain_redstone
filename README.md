@@ -8,9 +8,7 @@ Inspirado no **universo RedStone** e na **cultura dos mineradores**, o site reú
 ---
 
 ## 🚀 Acesse o site
-🔗 **[Train your Brain with RedStone](https://seu-projeto.vercel.app)**  
-*(Substitua pelo link do seu deploy na Vercel)*
-
+🔗 **[Train your Brain with RedStone](https://train-your-brain-redstone.vercel.app/)**  
 ---
 
 ## 🧩 Jogos disponíveis
