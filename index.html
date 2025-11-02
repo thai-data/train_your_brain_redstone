@@ -89,9 +89,10 @@
       display: none;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
       min-height: 100vh;
-      padding-bottom: 60px;
+      padding: 20px 0 80px;
+      box-sizing: border-box;
     }
 
     #mainContent {
@@ -133,7 +134,8 @@
     }
 
     /* Linha superior e rodapé */
-    .footer-line, footer {
+    .footer-line,
+    footer {
       border-top: 1px solid #AE0822;
       padding: 15px 0;
       margin: 0;
@@ -156,25 +158,52 @@
       margin-top: 50px;
       padding-bottom: 25px;
     }
+
+    /* 📱 Ajuste para telas menores */
+    @media (max-width: 768px) {
+      header img {
+        width: 220px;
+      }
+
+      h1 {
+        font-size: 2.2em;
+      }
+
+      iframe {
+        width: 100%;
+        height: 90vh;
+      }
+
+      #gameContainer {
+        padding-bottom: 100px;
+      }
+
+      footer p {
+        text-align: center;
+      }
+
+      footer div p:last-child {
+        position: static !important;
+        margin-top: 10px;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>
-      Train your 🧠 with 
+      Train your 🧠 with
       <img src="https://cdn.prod.website-files.com/67519197ce9eaef4601a6287/68358790e9c8024c030ae2e6_Redstone%20Logo.svg" alt="RedStone Logo">
     </h1>
-    <p>This site was built for you to have fun, relax, and of course, activate your brain in on-chain mode.<br>
-    Inspired by the RedStone universe and Miner culture.</p>
+    <p>
+      This site was built for you to have fun, relax, and of course, activate your brain in on-chain mode.<br>
+      Inspired by the RedStone universe and Miner culture.
+    </p>
   </header>
 
-  <!-- 🔽 NOVA LINHA APÓS CABEÇALHO -->
-  <div class="footer-line">
-  </div>
+  <div class="footer-line"></div>
 
-  <!-- CONTEÚDO PRINCIPAL -->
   <div id="mainContent">
-
     <!-- MATCHING PAIRS -->
     <h2>Matching Pairs</h2>
     <div class="levels">
@@ -196,8 +225,8 @@
         <button onclick="openGame('https://wordwall.net/embed/adc9b4486a0e4193b699699179af1aaa?themeId=50&templateId=25&fontStackId=0', 'Memory Match Game – Supreme Miner Level')">Supreme Miner</button>
       </div>
     </div>
-	
-	<!-- CROSSWORD -->
+
+    <!-- WHACK-A-JALOKIM -->
     <h2>Whack-a-Jalokim</h2>
     <div class="levels">
       <div class="game-embed">
@@ -205,11 +234,13 @@
         <img src="https://screens.cdn.wordwall.net/200/097abcb56dbd48cc9edad2930cccec17_0" alt="">
         <button onclick="openGame('https://wordwall.net/embed/097abcb56dbd48cc9edad2930cccec17?themeId=22&templateId=45&fontStackId=0', 'Whack-a-Jalokim – Miner Level')">Miner</button>
       </div>
+
       <div class="game-embed">
         <h3>Level Elite Miner</h3>
         <img src="https://screens.cdn.wordwall.net/200/74b1ede2f54e4dd1846cf57b5a8f63a6_0" alt="">
         <button onclick="openGame('https://wordwall.net/embed/74b1ede2f54e4dd1846cf57b5a8f63a6?themeId=22&templateId=45&fontStackId=0', 'Whack-a-Jalokim – Elite Miner Level')">Elite Miner</button>
       </div>
+
       <div class="game-embed">
         <h3>Level Supreme Miner</h3>
         <img src="https://screens.cdn.wordwall.net/200/5429c6ff6e4d4f88a65414634310dc7a_0" alt="">
@@ -225,15 +256,17 @@
         <img src="https://screens.cdn.wordwall.net/200/78620cc0039b4c55bb45f380509da469_44" alt="">
         <button onclick="openGame('https://wordwall.net/embed/78620cc0039b4c55bb45f380509da469?themeId=44&templateId=73&fontStackId=0', 'Hangman – Miner Level')">Miner</button>
       </div>
+
       <div class="game-embed">
         <h3>Level Elite Miner</h3>
         <img src="https://screens.cdn.wordwall.net/200/b64f0955dbb44befa6f4f0b0065bba17_0" alt="">
-        <button onclick="openGame('https://wordwall.net/embed/b64f0955dbb44befa6f4f0b0065bba17?themeId=44&templateId=73&fontStackId=0')">Elite Miner</button>
+        <button onclick="openGame('https://wordwall.net/embed/b64f0955dbb44befa6f4f0b0065bba17?themeId=44&templateId=73&fontStackId=0', 'Hangman – Elite Miner Level')">Elite Miner</button>
       </div>
+
       <div class="game-embed">
         <h3>Level Supreme Miner</h3>
         <img src="https://screens.cdn.wordwall.net/200/14abd06ee52b42b4899ed1b162b7e595_0" alt="">
-        <button onclick="openGame('https://wordwall.net/embed/14abd06ee52b42b4899ed1b162b7e595?themeId=44&templateId=73&fontStackId=0')">Supreme Miner</button>
+        <button onclick="openGame('https://wordwall.net/embed/14abd06ee52b42b4899ed1b162b7e595?themeId=44&templateId=73&fontStackId=0', 'Hangman – Supreme Miner Level')">Supreme Miner</button>
       </div>
     </div>
 
@@ -245,11 +278,13 @@
         <img src="https://screens.cdn.wordwall.net/200/2fe089f531284a53ab2a32b1f439503e_45" alt="">
         <button onclick="openGame('https://wordwall.net/embed/2fe089f531284a53ab2a32b1f439503e?themeId=45&templateId=10&fontStackId=0', 'Wordsearch – Miner Level')">Miner</button>
       </div>
+
       <div class="game-embed">
         <h3>Level Elite Miner</h3>
         <img src="https://screens.cdn.wordwall.net/200/24618123c0314b16b580f8405fbf8285_45" alt="">
         <button onclick="openGame('https://wordwall.net/embed/24618123c0314b16b580f8405fbf8285?themeId=45&templateId=10&fontStackId=0', 'Wordsearch – Elite Miner Level')">Elite Miner</button>
       </div>
+
       <div class="game-embed">
         <h3>Level Supreme Miner</h3>
         <img src="https://screens.cdn.wordwall.net/200/2823b1e0e6c4490db51b7663aa455ea0_45" alt="">
@@ -257,35 +292,35 @@
       </div>
     </div>
 
-    
-
-    <!-- RODAPÉ -->
     <footer>
       <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; position: relative;">
         <p style="margin: 0 auto;">
-          <a href="https://www.redstone.finance/" target="_blank">RedStone</a> · 
-          <a href="https://x.com/redstone_defi" target="_blank">Twitter/X</a> · 
+          <a href="https://www.redstone.finance/" target="_blank">RedStone</a> ·
+          <a href="https://x.com/redstone_defi" target="_blank">Twitter/X</a> ·
           <a href="https://discord.gg/redstonedefi" target="_blank">Discord</a>
         </p>
-        <!-- Créditos de autoria -->
         <p style="position: absolute; right: 20px; margin: 0; font-size: 0.9em; color: #FFCFC5;">
           Made by <a href="https://x.com/thay_crypto" target="_blank" style="color: #FFE3E3; text-decoration: none; font-weight: bold;">Thai</a>
         </p>
       </div>
     </footer>
+  </div>
 
-  <!-- CONTAINER DO JOGO -->
   <div id="gameContainer">
     <h2 id="gameTitle"></h2>
-    <iframe id="gameFrame" allowfullscreen></iframe>
+    <iframe
+      id="gameFrame"
+      allow="fullscreen; autoplay; clipboard-read; clipboard-write; encrypted-media"
+      allowfullscreen>
+    </iframe>
     <button class="return-btn" onclick="returnToMenu()">Return</button>
 
     <div id="credits" style="display:none;">
       <p>A special thank you to our Miner Artists, who created these incredible images.</p>
       <p>
-        <a href="https://x.com/MorganaCitrini" target="_blank">@MorganaCitrini</a> · 
-        <a href="https://x.com/odalaxcrypto" target="_blank">@odalaxcrypto</a> · 
-        <a href="https://x.com/PudimSuave" target="_blank">@PudimSuave</a> · 
+        <a href="https://x.com/MorganaCitrini" target="_blank">@MorganaCitrini</a> ·
+        <a href="https://x.com/odalaxcrypto" target="_blank">@odalaxcrypto</a> ·
+        <a href="https://x.com/PudimSuave" target="_blank">@PudimSuave</a> ·
         <a href="https://x.com/ZiloByte" target="_blank">@ZiloByte</a>
       </p>
     </div>
@@ -323,4 +358,3 @@
   </script>
 </body>
 </html>
-
